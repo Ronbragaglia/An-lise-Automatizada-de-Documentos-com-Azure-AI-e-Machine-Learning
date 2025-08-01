@@ -18,7 +18,7 @@
 - **Verificação de autenticidade via QR Code**
 - **Geração de logs CSV para auditoria e compliance**
 
-- 🛠 Tecnologias Utilizadas
+## 🛠 Tecnologias Utilizadas
 Python 3.9+
 
 Google Colab (execução em nuvem)
