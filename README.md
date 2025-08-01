@@ -18,6 +18,23 @@
 - **Verificação de autenticidade via QR Code**
 - **Geração de logs CSV para auditoria e compliance**
 
+- 🛠 Tecnologias Utilizadas
+Python 3.9+
+
+Google Colab (execução em nuvem)
+
+Azure Cognitive Services
+
+Document Intelligence (Form Recognizer)
+
+OpenCV + Pyzbar (detecção de QR Codes)
+
+Pandas (tratamento de dados e logs)
+
+Scikit-learn (modelo de Machine Learning)
+
+
+
 ---
 
 ## ⚡ Pipeline da Solução
