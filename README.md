@@ -34,6 +34,12 @@ Pandas (tratamento de dados e logs)
 Scikit-learn (modelo de Machine Learning)
 
 
+📦 Azure-Document-Fraud-Detection-ML
+ ┣ 📜 README.md                      <- Documentação completa
+ ┣ 📜 main_colab_avancado.ipynb       <- Notebook com versão avançada (ML)
+ ┣ 📜 log_resultado_avancado.csv      <- Log de saída com score e classificação
+ ┣ 📜 modelo_fraude.joblib            <- Modelo Random Forest treinado
+ ┗ 📂 exemplos_documentos             <- Pasta opcional para PDFs/imagens de teste
 
 ---
 
