@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: document-fraud-detection
+    volumes:
+      # Mount application code for development
+      - .:/app
+      # Mount data directories
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./models:/app/models
+      - ./output:/app/output
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    networks:
+      - fraud-detection-network
+
+  # Jupyter Notebook service for development
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: document-fraud-detection-jupyter
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+    volumes:
+      - .:/app
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./models:/app/models
+      - ./output:/app/output
+    env_file:
+      - .env
+    ports:
+      - "8888:8888"
+    restart: unless-stopped
+    networks:
+      - fraud-detection-network
+
+networks:
+  fraud-detection-network:
+    driver: bridge
+
+volumes:
+  data:
+  logs:
+  models:
+  output:
